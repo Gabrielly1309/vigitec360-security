@@ -1,0 +1,465 @@
+/* CONFIGURAÇÕES GERAIS E CORES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b0f0c;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* CABEÇALHO */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #0b0f0c;
+    border-bottom: 1px solid #1a261d;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px !important;
+    width: auto !important;
+    max-height: none !important;
+    object-fit: contain;
+}
+
+.logo span {
+    color: #00ff66;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00ff66;
+}
+
+.btn-orcamento {
+    background-color: #00ff66;
+    color: #0b0f0c;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.btn-orcamento:hover {
+    background-color: #00cc52;
+}
+
+/* SEÇÃO HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 160px 50px 80px 50px;
+    min-height: 100vh;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #aaaaaa;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.btn-verde {
+    background-color: #00ff66;
+    color: #0b0f0c;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.btn-verde:hover {
+    background-color: #00cc52;
+}
+
+.btn-outline {
+    border: 1px solid #333333;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: border 0.3s;
+}
+
+.btn-outline:hover {
+    border-color: #00ff66;
+    color: #00ff66;
+}
+
+.hero-features {
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+/* Ajuste para a imagem principal da Hero */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 450px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: screen;
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.8));
+}
+
+/* SEÇÃO DOS TOTENS */
+.totens-section {
+    padding: 80px 50px;
+    max-width: 1300px;
+    margin: 0 auto;
+    border-top: 1px solid #1a261d;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+.section-title span {
+    color: #00ff66;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    margin: 10px 0 15px 0;
+    color: #ffffff;
+}
+
+.section-title p {
+    color: #aaaaaa;
+    font-size: 15px;
+}
+
+.totens-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.totem-card {
+    background-color: #121814;
+    border: 1px solid #1a261d;
+    padding: 40px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    transition: border-color 0.3s;
+}
+
+.totem-card:hover {
+    border-color: #00ff66;
+}
+
+.totem-card h3 {
+    font-size: 28px;
+    color: #00ff66;
+    margin-bottom: 5px;
+}
+
+.totem-sub {
+    font-size: 12px;
+    color: #888888;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.totem-card p {
+    color: #cccccc;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.totem-card ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.totem-card ul li {
+    color: #cccccc;
+    font-size: 14px;
+    padding: 8px 0;
+    border-bottom: 1px solid #1a261d;
+}
+
+.totem-img-container {
+    width: 100%;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background: transparent;
+    overflow: hidden;
+}
+
+.totem-img-container img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: screen;
+}
+
+/* SEÇÃO DE TECNOLOGIA */
+.tecnologia-section {
+    padding: 80px 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-top: 1px solid #1a261d;
+    text-align: center;
+}
+
+.tech-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.tech-card {
+    background-color: #121814;
+    border: 1px solid #1a261d;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 210px;
+    max-width: 240px;
+    padding: 25px 15px;
+    text-align: left;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.tech-card:hover {
+    border-color: #00ff66;
+    transform: translateY(-5px);
+}
+
+.tech-icon {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.tech-card h3 {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.tech-card p {
+    color: #aaaaaa;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* SEÇÃO DE APLICAÇÕES COM FOTO DE FUNDO */
+.aplicacoes-section {
+    padding: 80px 50px;
+    max-width: 1300px;
+    margin: 0 auto;
+    border-top: 1px solid #1a261d;
+}
+
+.aplicacoes-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.app-card {
+    position: relative;
+    flex: 1;
+    min-width: 240px;
+    height: 320px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #1a261d;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.app-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.2) 70%);
+    display: flex;
+    align-items: flex-end;
+    padding: 25px;
+    transition: background 0.3s;
+}
+
+.app-card h3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff66;
+}
+
+.app-card:hover h3 {
+    color: #00ff66;
+}
+
+/* SEÇÃO CTA COM BANNER DE FUNDO (ATUALIZADA COM O BOTÃO PERFEITO) */
+.cta-banner {
+    background-image: url('imagens/cta-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 1300px;
+    height: 480px;
+    margin: 80px auto;
+    border-radius: 16px;
+    border: 1px solid #1a261d;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-banner-content {
+    position: absolute;
+    bottom: 60px;
+    left: 80px;
+}
+
+.cta-banner-content .btn-verde {
+    background-color: #9bcc00;
+    color: #111111;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(155, 204, 0, 0.4);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-banner-content .btn-verde:hover {
+    background-color: #8ab800;
+    transform: translateY(-2px);
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #070a08;
+    border-top: 1px solid #1a261d;
+    padding: 60px 50px 30px 50px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.footer-col p, .footer-col a {
+    color: #888888;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: #00ff66;
+}
