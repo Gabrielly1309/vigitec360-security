@@ -4,31 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vigitec360 Security - Totens de Segurança Inteligente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- CABEÇALHO -->
-    <header>
+    <header id="site-header">
         <div class="logo">
             <a href="#inicio">
                 <img src="imagens/logo.png" alt="Vigitec360 Security">
             </a>
-        </div> 
-        <nav>
+        </div>
+        <nav id="main-nav">
             <a href="#inicio">Início</a>
             <a href="#totens">Totens</a>
             <a href="#tecnologia">Tecnologia</a>
             <a href="#aplicacoes">Aplicações</a>
-            <a href="#sobre">Sobre nós</a> 
+            <a href="#sobre">Sobre nós</a>
+            <a href="#contato" class="btn-orcamento-mobile">Solicite um orçamento</a>
         </nav>
+        <span class="status-pill"><span class="dot"></span>Sistema online</span>
         <a href="#contato" class="btn-orcamento">Solicite um orçamento</a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </header>
 
     <!-- SEÇÃO HERO (TOPO) -->
     <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Presença que protege. Tecnologia que previne.</h1>
+        <div class="hero-content" data-reveal>
+            <span class="hero-eyebrow"><span class="dot"></span>Monitoramento ativo 24h</span>
+            <h1>Presença que <span class="accent-word">protege</span>. Tecnologia que previne.</h1>
             <p>Totens de segurança inteligente com design moderno, alta visibilidade e tecnologia de monitoramento 24h para proteção de espaços públicos e privados.</p>
             <div class="hero-buttons">
                 <a href="#totens" class="btn-verde">Conheça os totens</a>
@@ -41,7 +50,7 @@
                 <div>🔧 Fixação no chão</div>
             </div>
         </div>
-        <div class="hero-image">
+        <div class="hero-image" data-reveal>
             <img src="imagens/toten.png" alt="Totens Vigitec360 Security" style="max-width: 100%; height: auto; border-radius: 8px;">
         </div>
     </section>
@@ -56,8 +65,10 @@
 
         <div class="totens-grid">
             <!-- MODELO 1: TITAN -->
-            <div class="totem-card">
-                <div class="totem-img-container">
+            <div class="totem-card" data-reveal>
+                <div class="totem-img-container hud-frame">
+                    <span class="hud-tag"><span class="rec-dot"></span>CAM-01 · TITAN</span>
+                    <span class="scan-line"></span>
                     <img src="imagens/titan.png" alt="Totem Titan Vigitec360">
                 </div>
                 <h3>TITAN</h3>
@@ -75,8 +86,10 @@
             </div>
 
             <!-- MODELO 2: IRON -->
-            <div class="totem-card">
-                <div class="totem-img-container">
+            <div class="totem-card" data-reveal>
+                <div class="totem-img-container hud-frame">
+                    <span class="hud-tag"><span class="rec-dot"></span>CAM-02 · IRON</span>
+                    <span class="scan-line"></span>
                     <img src="imagens/iron.png" alt="Totem Iron Vigitec360">
                 </div>
                 <h3>IRON</h3>
@@ -94,8 +107,10 @@
             </div>
 
             <!-- MODELO 3: THOR -->
-            <div class="totem-card">
-                <div class="totem-img-container">
+            <div class="totem-card" data-reveal>
+                <div class="totem-img-container hud-frame">
+                    <span class="hud-tag"><span class="rec-dot"></span>CAM-03 · THOR</span>
+                    <span class="scan-line"></span>
                     <img src="imagens/thor.png" alt="Totem Thor Vigitec360">
                 </div>
                 <h3>THOR</h3>
@@ -122,27 +137,27 @@
         </div>
 
         <div class="tech-grid">
-            <div class="tech-card">
+            <div class="tech-card" data-reveal>
                 <div class="tech-icon">🛡️</div>
                 <h3>Monitoramento 24h</h3>
                 <p>Proteção contínua com monitoramento em tempo real.</p>
             </div>
-            <div class="tech-card">
+            <div class="tech-card" data-reveal>
                 <div class="tech-icon">📷</div>
                 <h3>Câmeras Full HD</h3>
                 <p>Imagens nítidas e de alta qualidade para mais segurança.</p>
             </div>
-            <div class="tech-card">
+            <div class="tech-card" data-reveal>
                 <div class="tech-icon">💬</div>
                 <h3>Contato via WhatsApp</h3>
                 <p>Comunicação rápida e direta com a central de segurança.</p>
             </div>
-            <div class="tech-card">
+            <div class="tech-card" data-reveal>
                 <div class="tech-icon">🌧️</div>
                 <h3>Resistente ao tempo</h3>
                 <p>Projetado para suportar sol, chuva e condições extremas.</p>
             </div>
-            <div class="tech-card">
+            <div class="tech-card" data-reveal>
                 <div class="tech-icon">🔧</div>
                 <h3>Fixação no chão</h3>
                 <p>Instalação segura e firme para máxima estabilidade.</p>
@@ -159,26 +174,30 @@
         </div>
 
         <div class="aplicacoes-grid">
-            <a href="#" class="app-card" style="background-image: url('imagens/app-ruas.png');">
+            <a href="#" class="app-card" style="background-image: url('imagens/app-ruas.png');" data-reveal>
                 <div class="app-overlay">
+                    <span class="app-index">ZONA 01</span>
                     <h3>Avenidas e Ruas</h3>
                 </div>
             </a>
 
-            <a href="#" class="app-card" style="background-image: url('imagens/app-condominios.png');">
+            <a href="#" class="app-card" style="background-image: url('imagens/app-condominios.png');" data-reveal>
                 <div class="app-overlay">
+                    <span class="app-index">ZONA 02</span>
                     <h3>Condomínios</h3>
                 </div>
             </a>
 
-            <a href="#" class="app-card" style="background-image: url('imagens/app-parques.png');">
+            <a href="#" class="app-card" style="background-image: url('imagens/app-parques.png');" data-reveal>
                 <div class="app-overlay">
+                    <span class="app-index">ZONA 03</span>
                     <h3>Parques e Praças</h3>
                 </div>
             </a>
 
-            <a href="#" class="app-card" style="background-image: url('imagens/app-estacionamentos.png');">
+            <a href="#" class="app-card" style="background-image: url('imagens/app-estacionamentos.png');" data-reveal>
                 <div class="app-overlay">
+                    <span class="app-index">ZONA 04</span>
                     <h3>Estacionamentos</h3>
                 </div>
             </a>
@@ -186,7 +205,8 @@
     </section>
 
     <!-- SEÇÃO SOBRE NÓS / BANNER CTA -->
-    <section id="sobre" class="cta-banner">
+    <section id="sobre" class="cta-banner" data-reveal>
+        <span class="cta-banner-eyebrow">Sobre nós</span>
         <div class="cta-banner-content">
             <a href="#contato" class="btn-verde">Solicite um orçamento &rarr;</a>
         </div>
@@ -198,6 +218,7 @@
             <div class="footer-col">
                 <div class="logo">Vigitec360 <span>SECURITY</span></div>
                 <p>© 2026 Vigitec360 Security. Todos os direitos reservados.</p>
+                <span class="footer-status"><span class="dot"></span>Todos os sistemas operacionais</span>
             </div>
             <div class="footer-col">
                 <h4>NAVEGAÇÃO</h4>
@@ -222,5 +243,6 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
